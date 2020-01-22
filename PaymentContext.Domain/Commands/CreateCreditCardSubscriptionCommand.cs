@@ -9,9 +9,9 @@ namespace PaymentContext.Domain.Commands
     public string LastName { get; set; }
     public string Document { get; set; }
     public string Email { get; set; }
-    public String CardHolderName { get; private set; }
-    public String CardNumber { get; private set; }
-    public String LastTransactionNumber { get; private set; }
+    public String CardHolderName { get; set; }
+    public String CardNumber { get; set; }
+    public String LastTransactionNumber { get; set; }
 
     public string PayerNumber { get; set; }
     public DateTime PaidDate { get; set; }

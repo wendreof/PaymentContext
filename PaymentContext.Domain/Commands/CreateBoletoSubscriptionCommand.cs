@@ -9,8 +9,8 @@ namespace PaymentContext.Domain.Commands
     public string LastName { get; set; }
     public string Document { get; set; }
     public string Email { get; set; }
-    public String BarCode { get; private set; }
-    public String BoletoNumber { get; private set; }
+    public String BarCode { get; set; }
+    public String BoletoNumber { get; set; }
 
     public string PayerNumber { get; set; }
     public DateTime PaidDate { get; set; }
