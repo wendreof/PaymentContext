@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PaymentContext.Domain.Entities;
+using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.ValueObjects;
 
 namespace PaymentContext.Tests
@@ -10,25 +11,29 @@ namespace PaymentContext.Tests
     [TestMethod]
     public void ShouldReturnErrorWhenCNPJIsInvalid()
     {
-      Assert.Fail();
+      var doc = new Document("123", EDocumentType.CNPJ);
+      Assert.IsTrue(doc.Invalid);
     }
 
     [TestMethod]
     public void ShouldReturnSuccessCNPJIsValid()
     {
-      Assert.Fail();
+      var doc = new Document("34110468000150", EDocumentType.CNPJ);
+      Assert.IsTrue(doc.Valid);
     }
 
     [TestMethod]
     public void ShouldReturnErrorWhenCPFIsInvalid()
     {
-      Assert.Fail();
+      var doc = new Document("123", EDocumentType.CPF);
+      Assert.IsTrue(doc.Invalid);
     }
 
     [TestMethod]
     public void ShouldReturnSuccessCPFIsValid()
     {
-      Assert.Fail();
+      var doc = new Document("41720163839", EDocumentType.CPF);
+      Assert.IsTrue(doc.Valid);
     }
   }
 }
